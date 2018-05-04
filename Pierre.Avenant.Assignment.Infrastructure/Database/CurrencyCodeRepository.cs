@@ -6,16 +6,12 @@ using System.Linq;
 using System.Text;
 using Dapper;
 using Pierre.Avenant.Assignment.Core.Entities;
+using Pierre.Avenant.Assignment.Core.Interfaces;
 using CurrencyCode = System.String;
 using Currency = System.String;
 
 namespace Pierre.Avenant.Assignment.Infrastructure.Database
 {
-    public interface ICurrencyCodeRepository
-    {
-        Dictionary<CurrencyCode, Currency> GetCurrencyCodes();
-    }
-
     public class CurrencyCodeRepository : ICurrencyCodeRepository
     {
         public Dictionary<CurrencyCode, Currency> GetCurrencyCodes()

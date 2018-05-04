@@ -8,4 +8,3 @@ C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pier
 C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Core\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Core.AssemblyInfo.cs
 C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Core\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Core.dll
 C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Core\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Core.pdb
-C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Core\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Core.csprojResolveAssemblyReference.cache
