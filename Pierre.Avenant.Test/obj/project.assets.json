@@ -1565,7 +1565,7 @@
           "Microsoft.NETCore.Platforms": "2.0.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
@@ -1832,7 +1832,8 @@
           "Dapper": "1.50.4",
           "ExcelDataReader": "3.4.0",
           "Microsoft.NETCore.App": "2.0.0",
-          "Pierre.Avenant.Assignment.Core": "1.0.0"
+          "Pierre.Avenant.Assignment.Core": "1.0.0",
+          "System.Text.Encoding.CodePages": "4.4.0"
         },
         "compile": {
           "bin/placeholder/Pierre.Avenant.Assignment.Infrastructure.dll": {}
@@ -1908,7 +1909,7 @@
       ]
     },
     "Microsoft.CSharp/4.0.1": {
-      "sha512": "17h8b5mXa87XYKrrVqdgZ38JefSUqLChUQpXgSnpzsM0nDOhE40FTeNWOJ/YmySGV6tG6T8+hjz6vxbknHJr6A==",
+      "sha512": "gGroKYOuedvxI8xL4KWckptn0p7V0ohLtFToXNDDBPGu8/KyXWbqePScOKJX7wen/ChEpJWvfzQANUOOvXMuRQ==",
       "type": "package",
       "path": "microsoft.csharp/4.0.1",
       "files": [
@@ -2561,7 +2562,7 @@
       ]
     },
     "Microsoft.Win32.Primitives/4.0.1": {
-      "sha512": "fQnBHO9DgcmkC9dYSJoBqo6sH1VJwJprUHh8F3hbcRlxiQiBUuTntdk8tUwV490OqC2kQUrinGwZyQHTieuXRA==",
+      "sha512": "weXBu9950RaZE/VAJDMbS8klVYGW8Y6EDpP+h+vrUjtcIAvAaLbDpnvy5R/WuteuH5nGyIEmJOOn9p4mdG1H+w==",
       "type": "package",
       "path": "microsoft.win32.primitives/4.0.1",
       "files": [
@@ -2936,7 +2937,7 @@
       ]
     },
     "Newtonsoft.Json/9.0.1": {
-      "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
+      "sha512": "sQ4NiOYekuPSOIo84A+YYbqT53AtuWxgVYXJeLBn1bSZGAd2pnWko1F44AHAuMV3sPLttgpcv65uZ4zmkbyPgw==",
       "type": "package",
       "path": "newtonsoft.json/9.0.1",
       "files": [
@@ -3212,7 +3213,7 @@
       ]
     },
     "System.Collections.Immutable/1.2.0": {
-      "sha512": "Cma8cBW6di16ZLibL8LYQ+cLjGzoKxpOTu/faZfDcx94ZjAGq6Nv5RO7+T1YZXqEXTZP9rt1wLVEONVpURtUqw==",
+      "sha512": "axjRuo7cD0rOnGSLcuJFOmryyFCfTO2jn7UcaatiQS+osNbZqHep8IUUipwdwoBbaXWROTwxHqD7s/KvrdEAfA==",
       "type": "package",
       "path": "system.collections.immutable/1.2.0",
       "files": [
@@ -3227,7 +3228,7 @@
       ]
     },
     "System.Collections.NonGeneric/4.3.0": {
-      "sha512": "prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
+      "sha512": "1+xTaLFqHM7KVMYMjovF+J8+8aOKnl8bjYF0WslzrXu0O3N0ylRQMRyQ0umKtC1zQtQ2X5XkA3ON54NCNtPI+w==",
       "type": "package",
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
@@ -3264,7 +3265,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "ISehNMYrpCIr9SggwVwX/Tp3i1lJqe+cvDEFCrVi6ThwfLI1hEt8eqUvwm2xwl2YH45mz+xYUH7q7qA9wgEX7g==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -3426,7 +3427,7 @@
       ]
     },
     "System.ComponentModel.Primitives/4.3.0": {
-      "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
+      "sha512": "2V0iIhVOWMVS+QuD1yKdYrhQhmNI3QsnyyVMu9fOZL6opOq68ClNqVBews3eT+zg6Hm82bPISQYzQBl5x9bQZw==",
       "type": "package",
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
@@ -3463,7 +3464,7 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
+      "sha512": "ILC/Xyyo5IGq5pb4VP892vd6ERo76RWLP+WSD6LC9Y82T0/OGOVMncbktUXrXbtfktJE32XvfpT3YX7ckx1yUQ==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
@@ -3646,7 +3647,7 @@
       ]
     },
     "System.Diagnostics.Process/4.1.0": {
-      "sha512": "mpVZ5bnlSs3tTeJ6jYyDJEIa6tavhAd88lxq1zbYhkkCu0Pno2+gHXcvZcoygq2d8JxW3gojXqNJMTAshduqZA==",
+      "sha512": "EVAAWcMavdTBeOW3V9Z+uS3J7Hitp9+6I75H1/f4yr1wEQDoj1hpG87iEhX7AsCnWjU6LpQCVVSbHf2ljX3vKg==",
       "type": "package",
       "path": "system.diagnostics.process/4.1.0",
       "files": [
@@ -4791,7 +4792,7 @@
       ]
     },
     "System.Reflection.Metadata/1.3.0": {
-      "sha512": "jMSCxA4LSyKBGRDm/WtfkO03FkcgRzHxwvQRib1bm2GZ8ifKM1MX1al6breGCEQK280mdl9uQS7JNPXRYk90jw==",
+      "sha512": "QmzmnZvar1OwCFUFsCaRH47v7v2B12n2GxhkHfIKRWWkXuVB1/JADQTMmBKnf73OzZVqQZP2+HzWHeeoEMkQFw==",
       "type": "package",
       "path": "system.reflection.metadata/1.3.0",
       "files": [
@@ -5274,7 +5275,7 @@
       ]
     },
     "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
-      "sha512": "hWPhJxc453RCa8Z29O91EmfGeZIHX1ZH2A8L6lYQVSaKzku2DfArSfMEb1/MYYzPQRJZeu0c9dmYeJKxW5Fgng==",
+      "sha512": "GllljqZ4aO3UdFU/NxCTpodtFRGysgdBMTZklZKPwWZbK0yONbB4kwW0GM/yT0Ad4rSpzyanUUDLPq7u3RO8dA==",
       "type": "package",
       "path": "system.runtime.interopservices.runtimeinformation/4.0.0",
       "files": [
@@ -5306,7 +5307,7 @@
       ]
     },
     "System.Runtime.Loader/4.0.0": {
-      "sha512": "4UN78GOVU/mbDFcXkEWtetJT/sJ0yic2gGk1HSlSpWI0TDf421xnrZTDZnwNBapk1GQeYN7U1lTj/aQB1by6ow==",
+      "sha512": "Vir3gL1/2PSf3bH4JzhvwQrB/J7Ig1YqXuyEd4cFDKS5JZsd8ijZH+zTATK9ylxMc8pw3vZ1cwfJLf0o2hP/yQ==",
       "type": "package",
       "path": "system.runtime.loader/4.0.0",
       "files": [
@@ -5387,7 +5388,7 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.1.1": {
-      "sha512": "HZ6Du5QrTG8MNJbf4e4qMO3JRAkIboGT5Fk804uZtg3Gq516S7hAqTm2UZKUHa7/6HUGdVy3AqMQKbns06G/cg==",
+      "sha512": "J/fnBfmKyPm1wSBWpxlmC/5UJ4IMAKmkDdt0WaZmdD1bOzStHrVrnQzeBKJ2PqrFULsX2QeizZY/FociG9k65A==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.1.1",
       "files": [
@@ -5944,7 +5945,7 @@
       ]
     },
     "System.Threading.Thread/4.0.0": {
-      "sha512": "gIdJqDXlOr5W9zeqFErLw3dsOsiShSCYtF9SEHitACycmvNvY8odf9kiKvp6V7aibc8C4HzzNBkWXjyfn7plbQ==",
+      "sha512": "CcOIIJxNE4fRASOoDvBpayyX/U1Tw6WJ64eQ1Y9k4kQ0gowMfUvc10KdmuKalyDieS6AMSsa0hJ0icUe+7GlUA==",
       "type": "package",
       "path": "system.threading.thread/4.0.0",
       "files": [
@@ -5982,7 +5983,7 @@
       ]
     },
     "System.Threading.ThreadPool/4.0.10": {
-      "sha512": "IMXgB5Vf/5Qw1kpoVgJMOvUO1l32aC+qC3OaIZjWJOjvcxuxNWOK2ZTWWYXfij22NHxT2j1yWX5vlAeQWld9vA==",
+      "sha512": "HsWHQwD+tFZXQ8c/ZiYGhAydUk/y4FT/exXEsYm+dBdSRwBdJDzxYAZ1ldpWVrofilOJRKVsWVcJV3giVoO52Q==",
       "type": "package",
       "path": "system.threading.threadpool/4.0.10",
       "files": [
@@ -6401,24 +6402,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pavenant\\.nuget\\packages\\": {},
+    "C:\\Users\\pierr\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MyStuff\\Core.Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Test\\Pierre.Avenant.Assignment.Test.csproj",
+      "projectUniqueName": "C:\\Code\\Assignment\\Pierre.Avenant.Test\\Pierre.Avenant.Assignment.Test.csproj",
       "projectName": "Pierre.Avenant.Assignment.Test",
-      "projectPath": "C:\\MyStuff\\Core.Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Test\\Pierre.Avenant.Assignment.Test.csproj",
-      "packagesPath": "C:\\Users\\pavenant\\.nuget\\packages\\",
-      "outputPath": "C:\\MyStuff\\Core.Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Test\\obj\\",
+      "projectPath": "C:\\Code\\Assignment\\Pierre.Avenant.Test\\Pierre.Avenant.Assignment.Test.csproj",
+      "packagesPath": "C:\\Users\\pierr\\.nuget\\packages\\",
+      "outputPath": "C:\\Code\\Assignment\\Pierre.Avenant.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\pavenant\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\pierr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -6430,11 +6434,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\MyStuff\\Core.Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Core\\Pierre.Avenant.Assignment.Core.csproj": {
-              "projectPath": "C:\\MyStuff\\Core.Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Core\\Pierre.Avenant.Assignment.Core.csproj"
+            "C:\\Code\\Assignment\\Pierre.Avenant.Assignment.Core\\Pierre.Avenant.Assignment.Core.csproj": {
+              "projectPath": "C:\\Code\\Assignment\\Pierre.Avenant.Assignment.Core\\Pierre.Avenant.Assignment.Core.csproj"
             },
-            "C:\\MyStuff\\Core.Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Infrastructure\\Pierre.Avenant.Assignment.Infrastructure.csproj": {
-              "projectPath": "C:\\MyStuff\\Core.Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Infrastructure\\Pierre.Avenant.Assignment.Infrastructure.csproj"
+            "C:\\Code\\Assignment\\Pierre.Avenant.Assignment.Infrastructure\\Pierre.Avenant.Assignment.Infrastructure.csproj": {
+              "projectPath": "C:\\Code\\Assignment\\Pierre.Avenant.Assignment.Infrastructure\\Pierre.Avenant.Assignment.Infrastructure.csproj"
             }
           }
         }

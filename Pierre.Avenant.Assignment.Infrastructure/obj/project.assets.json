@@ -460,7 +460,7 @@
           "Microsoft.NETCore.Platforms": "2.0.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
@@ -1876,28 +1876,32 @@
       "Dapper >= 1.50.4",
       "ExcelDataReader >= 3.4.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "Pierre.Avenant.Assignment.Core >= 1.0.0"
+      "Pierre.Avenant.Assignment.Core >= 1.0.0",
+      "System.Text.Encoding.CodePages >= 4.4.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pavenant\\.nuget\\packages\\": {},
+    "C:\\Users\\pierr\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MyStuff\\Core.Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Infrastructure\\Pierre.Avenant.Assignment.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Code\\Assignment\\Pierre.Avenant.Assignment.Infrastructure\\Pierre.Avenant.Assignment.Infrastructure.csproj",
       "projectName": "Pierre.Avenant.Assignment.Infrastructure",
-      "projectPath": "C:\\MyStuff\\Core.Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Infrastructure\\Pierre.Avenant.Assignment.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\pavenant\\.nuget\\packages\\",
-      "outputPath": "C:\\MyStuff\\Core.Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Infrastructure\\obj\\",
+      "projectPath": "C:\\Code\\Assignment\\Pierre.Avenant.Assignment.Infrastructure\\Pierre.Avenant.Assignment.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\pierr\\.nuget\\packages\\",
+      "outputPath": "C:\\Code\\Assignment\\Pierre.Avenant.Assignment.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\pavenant\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\pierr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -1909,8 +1913,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\MyStuff\\Core.Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Core\\Pierre.Avenant.Assignment.Core.csproj": {
-              "projectPath": "C:\\MyStuff\\Core.Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Web\\Pierre.Avenant.Assignment.Core\\Pierre.Avenant.Assignment.Core.csproj"
+            "C:\\Code\\Assignment\\Pierre.Avenant.Assignment.Core\\Pierre.Avenant.Assignment.Core.csproj": {
+              "projectPath": "C:\\Code\\Assignment\\Pierre.Avenant.Assignment.Core\\Pierre.Avenant.Assignment.Core.csproj"
             }
           }
         }
@@ -1936,6 +1940,10 @@
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true
+          },
+          "System.Text.Encoding.CodePages": {
+            "target": "Package",
+            "version": "[4.4.0, )"
           }
         },
         "imports": [

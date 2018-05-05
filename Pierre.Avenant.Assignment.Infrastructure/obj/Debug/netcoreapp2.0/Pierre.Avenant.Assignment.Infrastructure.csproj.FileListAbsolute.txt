@@ -12,3 +12,17 @@ C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pier
 C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Infrastructure\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Core.dll
 C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Infrastructure\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Core.pdb
 C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Infrastructure\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.csproj.CopyComplete
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.deps.json
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.runtimeconfig.json
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.runtimeconfig.dev.json
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.dll
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.pdb
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Core.dll
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Core.pdb
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.AssemblyInfoInputs.cache
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.AssemblyInfo.cs
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.csproj.CopyComplete
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.dll
+C:\Code\Assignment\Pierre.Avenant.Assignment.Infrastructure\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.pdb

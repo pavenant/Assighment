@@ -4,6 +4,8 @@ using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Pierre.Avenant.Assignment.Core.Interfaces;
+using Pierre.Avenant.Assignment.Core.Interfaces.Database;
+using Pierre.Avenant.Assignment.Core.Interfaces.Services;
 using Pierre.Avenant.Assignment.Core.Services.Validation;
 
 namespace Pierre.Avenant.Assignment.Test.Services.Validation

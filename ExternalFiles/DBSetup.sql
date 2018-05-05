@@ -1,4 +1,30 @@
 ﻿
+drop table if exists AccountTransaction
+
+create table AccountTransaction
+(
+	AccountTransactionId int identity (1,1),
+	Account varchar(128),
+	Description varchar(256),
+	CurrencyCode char(3),
+	Amount DECIMAL(19,4),
+	CreatedDate datetime2 not null constraint df_AccountTransaction_CreatedDate default (GETDATE()),
+	FileUploadId int null,
+	constraint pk_TransactionUpload primary key (AccountTransactionId)
+)
+
+drop table if exists FileUpload
+
+create table FileUpload
+(
+	FileUploadId int identity (1,1),
+	FileName varchar(255),
+	UploadDate datetime2,
+	NumberOfRecords int,
+	NumberOfSuccessfullRecords int,
+	constraint pk_FileUpload primary key (FileUploadId)
+)
+
 
 drop table if exists CurrencyCode
 
@@ -102,7 +128,7 @@ insert CurrencyCode values ('MKD','Macedonian denar')
 insert CurrencyCode values ('MMK','Myanmar kyat')
 insert CurrencyCode values ('MNT','Mongolian tögrög')
 insert CurrencyCode values ('MOP','Macanese pataca')
-insert CurrencyCode values ('MRU[12]','Mauritanian ouguiya')
+insert CurrencyCode values ('MRU','Mauritanian ouguiya')
 insert CurrencyCode values ('MUR','Mauritian rupee')
 insert CurrencyCode values ('MVR','Maldivian rufiyaa')
 insert CurrencyCode values ('MWK','Malawian kwacha')
@@ -140,7 +166,7 @@ insert CurrencyCode values ('SLL','Sierra Leonean leone')
 insert CurrencyCode values ('SOS','Somali shilling')
 insert CurrencyCode values ('SRD','Surinamese dollar')
 insert CurrencyCode values ('SSP','South Sudanese pound')
-insert CurrencyCode values ('STN[14]','São Tomé and Príncipe dobra')
+insert CurrencyCode values ('STN','São Tomé and Príncipe dobra')
 insert CurrencyCode values ('SVC','Salvadoran colón')
 insert CurrencyCode values ('SYP','Syrian pound')
 insert CurrencyCode values ('SZL','Swazi lilangeni')
@@ -186,4 +212,13 @@ insert CurrencyCode values ('ZAR','South African rand')
 insert CurrencyCode values ('ZMW','Zambian kwacha')
 insert CurrencyCode values ('ZWL','Zimbabwean dollar A/10')
 
-select * from CurrencyCode
+
+ALTER TABLE AccountTransaction
+ADD FOREIGN KEY (FileUploadId) REFERENCES FileUpload(FileUploadId);
+
+ALTER TABLE AccountTransaction
+ADD FOREIGN KEY (CurrencyCode) REFERENCES CurrencyCode(CurrencyCode);
+
+----
+
+

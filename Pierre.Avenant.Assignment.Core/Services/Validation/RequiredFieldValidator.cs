@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using Pierre.Avenant.Assignment.Core.Interfaces;
+using Pierre.Avenant.Assignment.Core.Interfaces.Services;
 
 namespace Pierre.Avenant.Assignment.Core.Services.Validation
 {
-    public class ValueSuppliedValidator : IValidator
+    public class RequiredFieldValidator : IValidator
     {
         public bool Validate(string input)
         {

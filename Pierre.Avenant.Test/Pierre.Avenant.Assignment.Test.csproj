@@ -18,4 +18,22 @@
     <ProjectReference Include="..\Pierre.Avenant.Assignment.Infrastructure\Pierre.Avenant.Assignment.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="IntegrationTests\Infrastructure\Excel\TestFiles\InvalidHeader.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IntegrationTests\Infrastructure\Excel\TestFiles\InvalidTestFile.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IntegrationTests\Infrastructure\Excel\TestFiles\NoRows.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IntegrationTests\Infrastructure\Excel\TestFiles\PartialFailureTestFile.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IntegrationTests\Infrastructure\Excel\TestFiles\ValidTestFile.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

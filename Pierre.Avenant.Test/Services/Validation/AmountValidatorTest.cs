@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pierre.Avenant.Assignment.Core.Interfaces;
+using Pierre.Avenant.Assignment.Core.Interfaces.Services;
 using Pierre.Avenant.Assignment.Core.Services.Validation;
 
 namespace Pierre.Avenant.Assignment.Test.Services.Validation

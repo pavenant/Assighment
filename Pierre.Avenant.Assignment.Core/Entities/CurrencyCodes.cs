@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Pierre.Avenant.Assignment.Core.Interfaces;
+using Pierre.Avenant.Assignment.Core.Interfaces.Database;
 using CurrencyCode = System.String;
 using Currency = System.String;
 

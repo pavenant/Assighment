@@ -9,3 +9,14 @@ C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pier
 C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.dll
 C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.pdb
 C:\MyStuff\Core.Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.csprojResolveAssemblyReference.cache
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.deps.json
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.runtimeconfig.json
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.runtimeconfig.dev.json
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.dll
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.pdb
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.csproj.CoreCompileInputs.cache
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.AssemblyInfoInputs.cache
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.AssemblyInfo.cs
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.dll
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.pdb
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.csprojResolveAssemblyReference.cache

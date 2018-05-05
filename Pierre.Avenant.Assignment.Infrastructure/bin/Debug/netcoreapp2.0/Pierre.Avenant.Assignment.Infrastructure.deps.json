@@ -10,7 +10,8 @@
         "dependencies": {
           "Dapper": "1.50.4",
           "ExcelDataReader": "3.4.0",
-          "Pierre.Avenant.Assignment.Core": "1.0.0"
+          "Pierre.Avenant.Assignment.Core": "1.0.0",
+          "System.Text.Encoding.CodePages": "4.4.0"
         },
         "runtime": {
           "Pierre.Avenant.Assignment.Infrastructure.dll": {}
