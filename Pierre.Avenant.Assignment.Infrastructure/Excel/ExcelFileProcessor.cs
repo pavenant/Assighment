@@ -9,7 +9,7 @@ using Pierre.Avenant.Assignment.Core.Interfaces.Excel;
 
 namespace Pierre.Avenant.Assignment.Infrastructure.Excel
 {
-    public class ExcelFileLoader : IExcelFileLoader
+    public class ExcelFileProcessor : IExcelFileProcessor
     {
         public IList<(int RowIndex, string Account, string Description, string CurrencyCode, string Amount)> GetTransactionRecords(string filePath)
         {

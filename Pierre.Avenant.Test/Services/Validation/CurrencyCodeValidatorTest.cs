@@ -20,8 +20,8 @@ namespace Pierre.Avenant.Assignment.Test.Services.Validation
             currencyMock.Setup(x => x.GetCurrencyCodes())
                 .Returns(new Dictionary<string, string>() { {"GBP","British Pound"}});
 
-            IValidator validator = new CurrencyCodeValidator(currencyMock.Object);
-            var result = validator.Validate("GBP");
+            ICellValidator cellValidator = new CurrencyCodeCellValidator(currencyMock.Object);
+            var result = cellValidator.Validate("GBP");
             Assert.AreEqual(true,result);
 
         }
@@ -33,8 +33,8 @@ namespace Pierre.Avenant.Assignment.Test.Services.Validation
             currencyMock.Setup(x => x.GetCurrencyCodes())
                 .Returns(new Dictionary<string, string>() { { "GBP", "British Pound" } });
 
-            IValidator validator = new CurrencyCodeValidator(currencyMock.Object);
-            var result = validator.Validate("ZZZ");
+            ICellValidator cellValidator = new CurrencyCodeCellValidator(currencyMock.Object);
+            var result = cellValidator.Validate("ZZZ");
             Assert.AreEqual(false, result);
         }
     }

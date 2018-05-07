@@ -6,7 +6,7 @@ using Pierre.Avenant.Assignment.Core.Interfaces.Services;
 
 namespace Pierre.Avenant.Assignment.Core.Services.Validation
 {
-    public class RequiredFieldValidator : IValidator
+    public class RequiredFieldCellValidator : ICellValidator
     {
         public bool Validate(string input)
         {

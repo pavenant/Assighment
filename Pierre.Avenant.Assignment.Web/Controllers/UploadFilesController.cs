@@ -1,34 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using Pierre.Avenant.Assignment.Core.Entities;
 using Pierre.Avenant.Assignment.Core.Interfaces.Database;
 using Pierre.Avenant.Assignment.Core.Interfaces.Excel;
 using Pierre.Avenant.Assignment.Core.Interfaces.Services;
 using Pierre.Avenant.Assignment.Core.Services.FileInputService;
-using Pierre.Avenant.Assignment.Infrastructure.Database;
-using Pierre.Avenant.Assignment.Infrastructure.Excel;
 using Pierre.Avenant.Assignment.Web.Models;
 
 namespace Pierre.Avenant.Assignment.Web.Controllers
 {
     public class UploadFilesController : Controller
     {
-        private Configuration _config;
-        private IExcelFileLoader _excelFileUploader;
+        private IExcelFileProcessor _excelFileUploader;
         private ICurrencyCodeRepository _currencyCodeRepository;
         private IFileUploadRepository _fileUploadRepository;
         private IAccountTransactionRepository _accountTransactionRepository;
 
-        public UploadFilesController(IOptions<Configuration> configuration, IExcelFileLoader excelFileUploader, ICurrencyCodeRepository currencyCodeRepository,
-                                        IFileUploadRepository fileUploadRepository,IAccountTransactionRepository accountTransactionRepository)
+        public UploadFilesController(IExcelFileProcessor excelFileUploader, ICurrencyCodeRepository currencyCodeRepository,
+                                     IFileUploadRepository fileUploadRepository,IAccountTransactionRepository accountTransactionRepository)
         {
-            _config = configuration.Value;
             _excelFileUploader = excelFileUploader;
             _currencyCodeRepository = currencyCodeRepository;
             _fileUploadRepository = fileUploadRepository;
@@ -42,7 +35,6 @@ namespace Pierre.Avenant.Assignment.Web.Controllers
             {
                 return View(viewModel);
             }
-
 
             viewModel.UserFileName = files[0].FileName;
             var fileToDownload = files[0];
@@ -62,10 +54,6 @@ namespace Pierre.Avenant.Assignment.Web.Controllers
                 viewModel.Exception = true;
                 viewModel.ExceptionMessage = fe.Message;
                 return View(viewModel);
-            }
-            catch (Exception e)
-            {
-                throw e;
             }
 
             return View(viewModel);
@@ -97,7 +85,7 @@ namespace Pierre.Avenant.Assignment.Web.Controllers
             if (files[0].ContentType != "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
             {
                 viewMode.Exception = true;
-                viewMode.ExceptionMessage = "File is not a valid file format. Please select a valid .xlsx file";
+                viewMode.ExceptionMessage = "File is not a valid file format. Please select a valid .xlsx file.";
                 return false;
             }
             return true;

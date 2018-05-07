@@ -7,11 +7,11 @@ using Pierre.Avenant.Assignment.Core.Interfaces.Services;
 
 namespace Pierre.Avenant.Assignment.Core.Services.Validation
 {
-    public class CurrencyCodeValidator : IValidator
+    public class CurrencyCodeCellValidator : ICellValidator
     {
         public ICurrencyCodeRepository _repo;
 
-        public CurrencyCodeValidator(ICurrencyCodeRepository repo)
+        public CurrencyCodeCellValidator(ICurrencyCodeRepository repo)
         {
             _repo = repo;
         }

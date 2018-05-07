@@ -28,7 +28,7 @@ namespace Pierre.Avenant.Assignment.Web
         {
             services.AddMvc();
             services.Configure<Configuration>(Configuration.GetSection("ConnectionStrings"));
-            services.AddTransient<IExcelFileLoader, ExcelFileLoader>();
+            services.AddTransient<IExcelFileProcessor, ExcelFileProcessor>();
             services.AddTransient<ICurrencyCodeRepository, CurrencyCodeRepository>(s => new CurrencyCodeRepository(Configuration.GetSection("ConnectionStrings")["DefaultConnection"]));
             services.AddTransient<IAccountTransactionRepository, AccountTransactionRepository>(s => new AccountTransactionRepository(Configuration.GetSection("ConnectionStrings")["DefaultConnection"]));
             services.AddTransient<IFileUploadRepository, FileUploadRepository>(s => new FileUploadRepository(Configuration.GetSection("ConnectionStrings")["DefaultConnection"]));

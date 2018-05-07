@@ -16,7 +16,7 @@ namespace Pierre.Avenant.Assignment.Test.IntegrationTests.Service
         [TestMethod]
         public void UploadValidFile_Success()
         {
-            IFileUploadService service = new FileUploadService(new ExcelFileLoader(),new CurrencyCodeRepository(Configuration.ConnectionString),new FileUploadRepository(Configuration.ConnectionString), new AccountTransactionRepository(Configuration.ConnectionString));
+            IFileUploadService service = new FileUploadService(new ExcelFileProcessor(),new CurrencyCodeRepository(Configuration.ConnectionString),new FileUploadRepository(Configuration.ConnectionString), new AccountTransactionRepository(Configuration.ConnectionString));
             var result =
                 service.ImportAccountTransactionFile(
                     ".\\IntegrationTests\\Infrastructure\\Excel\\TestFiles\\ValidTestFile.xlsx", ".\\IntegrationTests\\Infrastructure\\Excel\\TestFiles\\ValidTestFile.xlsx");
@@ -29,7 +29,7 @@ namespace Pierre.Avenant.Assignment.Test.IntegrationTests.Service
         [TestMethod]
         public void UploadPartialValidFile_Success()
         {
-            IFileUploadService service = new FileUploadService(new ExcelFileLoader(), new CurrencyCodeRepository(Configuration.ConnectionString),new FileUploadRepository(Configuration.ConnectionString), new AccountTransactionRepository(Configuration.ConnectionString));
+            IFileUploadService service = new FileUploadService(new ExcelFileProcessor(), new CurrencyCodeRepository(Configuration.ConnectionString),new FileUploadRepository(Configuration.ConnectionString), new AccountTransactionRepository(Configuration.ConnectionString));
             var result =
                 service.ImportAccountTransactionFile(
                     ".\\IntegrationTests\\Infrastructure\\Excel\\TestFiles\\PartialFailureTestFile.xlsx", ".\\IntegrationTests\\Infrastructure\\Excel\\TestFiles\\PartialFailureTestFile.xlsx");

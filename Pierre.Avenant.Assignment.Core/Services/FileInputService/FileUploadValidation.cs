@@ -11,18 +11,18 @@ namespace Pierre.Avenant.Assignment.Core.Services.FileInputService
 {
     public class FileUploadValidation
     {
-        private IValidator _requiredValidator;
-        private IValidator _amountValidator;
-        private IValidator _currencyCodeValidator;
+        private ICellValidator _requiredCellValidator;
+        private ICellValidator _amountCellValidator;
+        private ICellValidator _currencyCodeCellValidator;
 
         private ICurrencyCodeRepository _currencyCodeRepository;
 
         public FileUploadValidation(ICurrencyCodeRepository currencyRepository)
         {
             _currencyCodeRepository = currencyRepository;
-            _currencyCodeValidator = new CurrencyCodeValidator(_currencyCodeRepository);
-            _amountValidator = new AmountValidator();
-            _requiredValidator = new RequiredFieldValidator();
+            _currencyCodeCellValidator = new CurrencyCodeCellValidator(_currencyCodeRepository);
+            _amountCellValidator = new AmountCellValidator();
+            _requiredCellValidator = new RequiredFieldCellValidator();
         }
 
         public bool ValidateUploadRecord((int RowIndex, string Account, string Description, string CurrencyCode, string Amount) uploadRecord, FileImportResult result)
@@ -33,32 +33,32 @@ namespace Pierre.Avenant.Assignment.Core.Services.FileInputService
                     RowNumber = uploadRecord.RowIndex + 1
                 };
 
-            if (!_requiredValidator.Validate(uploadRecord.Account))
+            if (!_requiredCellValidator.Validate(uploadRecord.Account))
             {
                 validationFailure.CellValidationFailures.Add(new CellValidationFailure() { ColumnName = "Account", ValidationFailureDescription = "Required Field" });
             }
 
-            if (!_requiredValidator.Validate(uploadRecord.Description))
+            if (!_requiredCellValidator.Validate(uploadRecord.Description))
             {
                 validationFailure.CellValidationFailures.Add(new CellValidationFailure() { ColumnName = "Description", ValidationFailureDescription = "Required Field" });
             }
 
-            if (!_requiredValidator.Validate(uploadRecord.CurrencyCode))
+            if (!_requiredCellValidator.Validate(uploadRecord.CurrencyCode))
             {
                 validationFailure.CellValidationFailures.Add(new CellValidationFailure() { ColumnName = "CurrencyCode", ValidationFailureDescription = "Required Field" });
             }
 
-            if (!_requiredValidator.Validate(uploadRecord.Amount))
+            if (!_requiredCellValidator.Validate(uploadRecord.Amount))
             {
                 validationFailure.CellValidationFailures.Add(new CellValidationFailure() { ColumnName = "Amount", ValidationFailureDescription = "Required Field" });
             }
 
-            if (!_currencyCodeValidator.Validate(uploadRecord.CurrencyCode))
+            if (!_currencyCodeCellValidator.Validate(uploadRecord.CurrencyCode))
             {
                 validationFailure.CellValidationFailures.Add(new CellValidationFailure() { ColumnName = "CurrencyCode", ValidationFailureDescription = "Currency Code not Valid" });
             }
 
-            if (!_amountValidator.Validate(uploadRecord.Amount))
+            if (!_amountCellValidator.Validate(uploadRecord.Amount))
             {
                 validationFailure.CellValidationFailures.Add(new CellValidationFailure() { ColumnName = "Amount", ValidationFailureDescription = "Amount is not a valid amount" });
             }

@@ -13,7 +13,7 @@ namespace Pierre.Avenant.Assignment.Test.IntegrationTests.Infrastructure.Excel
         [TestMethod]
         public void Import_ValidFileSuccess()
         {
-            var e = new ExcelFileLoader();
+            var e = new ExcelFileProcessor();
             var records = e.GetTransactionRecords(".\\IntegrationTests\\Infrastructure\\Excel\\TestFiles\\ValidTestFile.xlsx");
             foreach (var record in records)
             {
@@ -27,7 +27,7 @@ namespace Pierre.Avenant.Assignment.Test.IntegrationTests.Infrastructure.Excel
         [ExpectedException(typeof(FormatException))]
         public void Import_InvalidFileFormat_Exception()
         {
-            var e = new ExcelFileLoader();
+            var e = new ExcelFileProcessor();
             var records = e.GetTransactionRecords(".\\IntegrationTests\\Infrastructure\\Excel\\TestFiles\\InvalidTestFile.xlsx");
         }
 
@@ -35,7 +35,7 @@ namespace Pierre.Avenant.Assignment.Test.IntegrationTests.Infrastructure.Excel
         [ExpectedException(typeof(FormatException))]
         public void Import_InvalidFileHeaderFormat_Exception()
         {
-            var e = new ExcelFileLoader();
+            var e = new ExcelFileProcessor();
             var records = e.GetTransactionRecords(".\\IntegrationTests\\Infrastructure\\Excel\\TestFiles\\InvalidHeader.xlsx");
         }
 
@@ -43,7 +43,7 @@ namespace Pierre.Avenant.Assignment.Test.IntegrationTests.Infrastructure.Excel
         [ExpectedException(typeof(FileNotFoundException))]
         public void Import_FileDoesNotExists_Exception()
         {
-            var e = new ExcelFileLoader();
+            var e = new ExcelFileProcessor();
             var records = e.GetTransactionRecords(".\\IntegrationTests\\Infrastructure\\Excel\\TestFiles\\doesnotexists.xlsx");
         }
 
@@ -51,7 +51,7 @@ namespace Pierre.Avenant.Assignment.Test.IntegrationTests.Infrastructure.Excel
         [ExpectedException(typeof(FormatException))]
         public void Import_NoRowsToImport_Exception()
         {
-            var e = new ExcelFileLoader();
+            var e = new ExcelFileProcessor();
             var records = e.GetTransactionRecords(".\\IntegrationTests\\Infrastructure\\Excel\\TestFiles\\norows.xlsx");
         }
     }

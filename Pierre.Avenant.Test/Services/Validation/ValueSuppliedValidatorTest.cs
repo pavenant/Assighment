@@ -14,24 +14,24 @@ namespace Pierre.Avenant.Assignment.Test.Services.Validation
         [TestMethod]
         public void Validate_ValidationPassSuccess()
         {
-            IValidator validator = new RequiredFieldValidator();
-            var result = validator.Validate("-");
+            ICellValidator cellValidator = new RequiredFieldCellValidator();
+            var result = cellValidator.Validate("-");
             Assert.AreEqual(true, result);
         }
 
         [TestMethod]
         public void Validate_BlankValue_ValidationFailedSuccess()
         {
-            IValidator validator = new RequiredFieldValidator();
-            var result = validator.Validate("");
+            ICellValidator cellValidator = new RequiredFieldCellValidator();
+            var result = cellValidator.Validate("");
             Assert.AreEqual(false, result);
         }
 
         [TestMethod]
         public void Validate_BlankNull_ValidtionFailedSuccess()
         {
-            IValidator validator = new RequiredFieldValidator();
-            var result = validator.Validate(null);
+            ICellValidator cellValidator = new RequiredFieldCellValidator();
+            var result = cellValidator.Validate(null);
             Assert.AreEqual(false, result);
         }
     }

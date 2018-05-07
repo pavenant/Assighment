@@ -2,7 +2,7 @@
 
 namespace Pierre.Avenant.Assignment.Core.Interfaces.Excel
 {
-    public interface IExcelFileLoader
+    public interface IExcelFileProcessor
     {
         IList<(int RowIndex, string Account, string Description, string CurrencyCode, string Amount)> GetTransactionRecords(string filePath);
     }

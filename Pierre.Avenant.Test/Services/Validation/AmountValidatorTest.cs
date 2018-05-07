@@ -14,16 +14,16 @@ namespace Pierre.Avenant.Assignment.Test.Services.Validation
         [TestMethod]
         public void Validate_Success()
         {
-            IValidator validator = new AmountValidator();
-            var result = validator.Validate("1.100");
+            ICellValidator cellValidator = new AmountCellValidator();
+            var result = cellValidator.Validate("1.100");
             Assert.AreEqual(true,result);
         }
 
         [TestMethod]
         public void Validate_NotValidDecimal_Failure()
         {
-            IValidator validator = new AmountValidator();
-            var result = validator.Validate("notvalid");
+            ICellValidator cellValidator = new AmountCellValidator();
+            var result = cellValidator.Validate("notvalid");
             Assert.AreEqual(false, result);
         }
     }

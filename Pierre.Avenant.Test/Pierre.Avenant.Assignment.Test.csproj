@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Pierre.Avenant.Assignment.Core\Pierre.Avenant.Assignment.Core.csproj" />
     <ProjectReference Include="..\Pierre.Avenant.Assignment.Infrastructure\Pierre.Avenant.Assignment.Infrastructure.csproj" />
+    <ProjectReference Include="..\Pierre.Avenant.Assignment.Web\Pierre.Avenant.Assignment.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>

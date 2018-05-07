@@ -11,14 +11,14 @@ namespace Pierre.Avenant.Assignment.Core.Services.FileInputService
 {
     public class FileUploadService : IFileUploadService
     {
-        private IExcelFileLoader _excelFileLoader;
+        private IExcelFileProcessor _excelFileProcessor;
         private FileUploadValidation _fileUploadValidation;
         private IAccountTransactionRepository _accountTransactionRepository;
         private IFileUploadRepository _fileUploadRepository;
 
-        public FileUploadService(IExcelFileLoader excelFileLoader,ICurrencyCodeRepository currencyRepository,IFileUploadRepository fileUploadRepository, IAccountTransactionRepository accountTransactionRepository)
+        public FileUploadService(IExcelFileProcessor excelFileProcessor,ICurrencyCodeRepository currencyRepository,IFileUploadRepository fileUploadRepository, IAccountTransactionRepository accountTransactionRepository)
         {
-            _excelFileLoader = excelFileLoader;
+            _excelFileProcessor = excelFileProcessor;
             _accountTransactionRepository = accountTransactionRepository;
             _fileUploadRepository = fileUploadRepository;
             _fileUploadValidation = new FileUploadValidation(currencyRepository);
@@ -54,7 +54,7 @@ namespace Pierre.Avenant.Assignment.Core.Services.FileInputService
         {
             FileImportResult fileImportResult = new FileImportResult();
 
-            fileUploadRecords = _excelFileLoader.GetTransactionRecords(filePath);
+            fileUploadRecords = _excelFileProcessor.GetTransactionRecords(filePath);
 
             foreach (var uploadRecord in fileUploadRecords)
             {
