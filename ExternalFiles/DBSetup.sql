@@ -1,4 +1,6 @@
-﻿
+﻿--Message = "Column 'CreatedDate' does not allow DBNull.Value."
+--                   CreatedDate
+
 drop table if exists AccountTransaction
 
 create table AccountTransaction
@@ -8,7 +10,7 @@ create table AccountTransaction
 	Description varchar(256),
 	CurrencyCode char(3),
 	Amount DECIMAL(19,4),
-	CreatedDate datetime2 not null constraint df_AccountTransaction_CreatedDate default (GETDATE()),
+	--CreatedDate datetime null constraint df_AccountTransaction_CreatedDate default (GETDATE()),
 	FileUploadId int null,
 	constraint pk_TransactionUpload primary key (AccountTransactionId)
 )

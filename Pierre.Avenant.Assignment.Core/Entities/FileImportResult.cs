@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Pierre.Avenant.Assignment.Core.Entities
 {
-    public class AccountTransactionImportResult
+    public class FileImportResult
     {
         public FileUpload FileUpload { get; set; }
         public IList<AccountTransaction> AccountTransactions { get; set; }
-        public IList< AccountTransactionUploadFailure> AccountTransactionUploadFailures { get; set; }
+        public IList<RowValidationFailure> AccountTransactionUploadFailures { get; set; }
     }
 }

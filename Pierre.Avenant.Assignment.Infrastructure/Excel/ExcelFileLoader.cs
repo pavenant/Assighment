@@ -58,20 +58,16 @@ namespace Pierre.Avenant.Assignment.Infrastructure.Excel
             if (reader.RowCount < 2)
             {
                 throw new FormatException(
-                    "Invalid File Format. Expecting File Header (Account|Description|CurrencyCode|Amount) and at least 1 valid transaction row.");
+                    "Invalid File Format. Expecting File Header (Account,Description,CurrencyCode,Amount) and at least 1 valid transaction row.");
             }
         }
 
         private static void ValidateHeader(IExcelDataReader reader)
         {
             ValidateHeaderFieldCount(reader);
-
             ValidateHeaderAccount(reader);
-
             ValidateHeaderDescription(reader);
-
             ValidateHeaderCurrencyCode(reader);
-
             ValidateHeaderAmount(reader);
         }
 
@@ -80,7 +76,7 @@ namespace Pierre.Avenant.Assignment.Infrastructure.Excel
             if (reader[3] == null || reader[3].ToString().ToUpper() != "AMOUNT")
             {
                 throw new FormatException(
-                    "Header Amount Field Exception. File Header Invalid Format, Expected Header --> Account|Description|CurrencyCode|Amount");
+                    "Header not valid. Expected Header Columns (Account,Description,CurrencyCode,Amount)");
             }
         }
 
@@ -89,7 +85,7 @@ namespace Pierre.Avenant.Assignment.Infrastructure.Excel
             if (reader[2] == null || reader[2].ToString().ToUpper().Replace(" ", "") != "CURRENCYCODE")
             {
                 throw new FormatException(
-                    "Header Currency Code Field Exception. File Header Invalid Format, Expected Header --> Account|Description|CurrencyCode|Amount");
+                    "Header not valid. Expected Header Columns (Account,Description,CurrencyCode,Amount)");
             }
         }
 
@@ -98,7 +94,7 @@ namespace Pierre.Avenant.Assignment.Infrastructure.Excel
             if (reader[1] == null || reader[1].ToString().ToUpper() != "DESCRIPTION")
             {
                 throw new FormatException(
-                    "Header Description Field Exception. File Header Invalid Format, Expected Header --> Account|Description|CurrencyCode|Amount");
+                    "Header not valid. Expected Header Columns (Account,Description,CurrencyCode,Amount)");
             }
         }
 
@@ -107,7 +103,7 @@ namespace Pierre.Avenant.Assignment.Infrastructure.Excel
             if (reader[0] == null || reader[0].ToString().ToUpper() != "ACCOUNT")
             {
                 throw new FormatException(
-                    "Header Account Field Exception. File Header Invalid Format, Expected Header --> Account|Description|CurrencyCode|Amount");
+                    "Header not valid. Expected Header Columns (Account,Description,CurrencyCode,Amount)");
             }
         }
 
@@ -116,7 +112,7 @@ namespace Pierre.Avenant.Assignment.Infrastructure.Excel
             if (reader.FieldCount != 4)
             {
                 throw new FormatException(
-                    "Field Count Exception. File Header Invalid Format, Expected Header --> Account|Description|CurrencyCode|Amount");
+                    "Header not valid. Expected Header Columns (Account,Description,CurrencyCode,Amount)");
             }
         }
     }

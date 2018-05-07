@@ -20,3 +20,8 @@ C:\Code\Assignment\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.
 C:\Code\Assignment\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.dll
 C:\Code\Assignment\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.pdb
 C:\Code\Assignment\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.csprojResolveAssemblyReference.cache
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Core.dll
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.dll
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Core.pdb
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\bin\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Infrastructure.pdb
+C:\Code\Assignment\Pierre.Avenant.Assignment.Web\obj\Debug\netcoreapp2.0\Pierre.Avenant.Assignment.Web.csproj.CopyComplete

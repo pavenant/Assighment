@@ -14,7 +14,7 @@ namespace Pierre.Avenant.Assignment.Test.IntegrationTests.Infrastructure.Databas
         [TestMethod]
         public void Save_Success()
         {
-            var fileUploadRepository = new FileUploadRepository();
+            var fileUploadRepository = new FileUploadRepository(Configuration.ConnectionString);
             var fileUpload = new FileUpload() {FileName = "MyTest.xlsx",NumberOfSuccessfullRecords = 2,NumberOfRecords = 2};
             fileUploadRepository.Save(fileUpload);
             Assert.AreNotEqual(0,fileUpload.FileUploadId);

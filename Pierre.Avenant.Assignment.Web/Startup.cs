@@ -6,6 +6,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Pierre.Avenant.Assignment.Core.Entities;
+using Pierre.Avenant.Assignment.Core.Interfaces.Database;
+using Pierre.Avenant.Assignment.Core.Interfaces.Excel;
+using Pierre.Avenant.Assignment.Infrastructure.Database;
+using Pierre.Avenant.Assignment.Infrastructure.Excel;
 
 namespace Pierre.Avenant.Assignment.Web
 {
@@ -22,6 +27,11 @@ namespace Pierre.Avenant.Assignment.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.Configure<Configuration>(Configuration.GetSection("ConnectionStrings"));
+            services.AddTransient<IExcelFileLoader, ExcelFileLoader>();
+            services.AddTransient<ICurrencyCodeRepository, CurrencyCodeRepository>(s => new CurrencyCodeRepository(Configuration.GetSection("ConnectionStrings")["DefaultConnection"]));
+            services.AddTransient<IAccountTransactionRepository, AccountTransactionRepository>(s => new AccountTransactionRepository(Configuration.GetSection("ConnectionStrings")["DefaultConnection"]));
+            services.AddTransient<IFileUploadRepository, FileUploadRepository>(s => new FileUploadRepository(Configuration.GetSection("ConnectionStrings")["DefaultConnection"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

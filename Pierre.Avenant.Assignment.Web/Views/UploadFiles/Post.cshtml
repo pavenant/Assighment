@@ -1,0 +1,66 @@
+﻿@model Pierre.Avenant.Assignment.Web.Models.UploadFilesModel
+
+@{
+    ViewData["Title"] = "Upload Files Result";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.UserFileName Upload Results</h2>
+
+
+@if (Model.Exception)
+{
+    <h3>Errors occured while uploading file</h3>
+    <p>The file could not be upladed due to errors while processing the file.</p>
+    <h3>Exception details</h3>
+    <p>@Model.ExceptionMessage</p>
+    <h3>Please fix the file and retry the upload</h3>
+}
+else
+{
+    <h3> @Model.UserFileName @Model.SuccessMessage</h3>
+    <h3>@Model.TotalRowsSuccessfull out of @Model.TotalRows rows uploaded.</h3>
+    <a asp-controller="AccountTransaction" asp-action="List" asp-route-fileUploadId=@Model.FileUploadId asp-route-fileName=@Model.UserFileName>View Uploaded Results</a>                                                                
+}
+
+
+@if (Model.RowImportFailures != null)
+{
+    <h2>Error Messages</h2>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                Row Number
+            </th>
+            <th>
+                Column
+            </th>
+            <th>
+                Error Message
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.RowImportFailures)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RowNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollumnName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ErrorMessage)
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+}
+
+

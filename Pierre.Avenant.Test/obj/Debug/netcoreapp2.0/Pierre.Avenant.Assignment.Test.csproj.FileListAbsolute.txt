@@ -41,3 +41,5 @@ C:\Code\Assignment\Pierre.Avenant.Test\bin\Debug\netcoreapp2.0\IntegrationTests\
 C:\Code\Assignment\Pierre.Avenant.Test\bin\Debug\netcoreapp2.0\IntegrationTests\Infrastructure\Excel\TestFiles\InvalidHeader.xlsx
 C:\Code\Assignment\Pierre.Avenant.Test\bin\Debug\netcoreapp2.0\IntegrationTests\Infrastructure\Excel\TestFiles\NoRows.xlsx
 C:\Code\Assignment\Pierre.Avenant.Test\bin\Debug\netcoreapp2.0\IntegrationTests\Infrastructure\Excel\TestFiles\PartialFailureTestFile.xlsx
+C:\Code\Assignment\Pierre.Avenant.Test\bin\Debug\netcoreapp2.0\Microsoft.Extensions.Configuration.dll
+C:\Code\Assignment\Pierre.Avenant.Test\bin\Debug\netcoreapp2.0\Microsoft.Extensions.Configuration.xml

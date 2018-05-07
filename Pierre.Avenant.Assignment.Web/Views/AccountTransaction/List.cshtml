@@ -1,0 +1,51 @@
+﻿@model Pierre.Avenant.Assignment.Web.Models.AccountTransactionModel
+
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>File Upload Details for File Upload Id @Model.FileName</h2>
+
+@if (Model.AccountTransactions != null)
+{
+    <h3>Account Transactions</h3>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                Account
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Currency Code
+            </th>
+            <th>
+                Amount
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.AccountTransactions)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Account)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrencyCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

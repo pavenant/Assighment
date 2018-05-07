@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
 using Dapper;
-using Pierre.Avenant.Assignment.Core.Entities;
-using Pierre.Avenant.Assignment.Core.Interfaces;
 using Pierre.Avenant.Assignment.Core.Interfaces.Database;
 using CurrencyCode = System.String;
 using Currency = System.String;
@@ -15,12 +11,17 @@ namespace Pierre.Avenant.Assignment.Infrastructure.Database
 {
     public class CurrencyCodeRepository : ICurrencyCodeRepository
     {
+        private string _connectionString;
+        public CurrencyCodeRepository(string connectionString)
+        {
+            _connectionString = connectionString;
+        }
         private Dictionary<CurrencyCode, Currency> _currencyDictionary;
         static object _lock = new object();
 
         public Dictionary<CurrencyCode, Currency> GetCurrencyCodes()
         {
-            using (IDbConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=Assignment;Integrated Security=True"))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                 const string query = @"
 	                SET TRAN ISOLATION LEVEL READ UNCOMMITTED

@@ -9,12 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pierre.Avenant.Assignment.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pierre.Avenant.Assignment.Infrastructure", "Pierre.Avenant.Assignment.Infrastructure\Pierre.Avenant.Assignment.Infrastructure.csproj", "{EC89A9E9-F369-408D-94ED-426CBA3C8737}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pierre.Avenant.Assignment.Test", "Pierre.Avenant.Test\Pierre.Avenant.Assignment.Test.csproj", "{742408D8-D220-4758-846C-EE14C83196BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pierre.Avenant.Assignment.Test", "Pierre.Avenant.Test\Pierre.Avenant.Assignment.Test.csproj", "{742408D8-D220-4758-846C-EE14C83196BC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SetupFiles", "SetupFiles", "{44F9402C-6A43-41F6-BC16-BA78AD5E6765}"
 	ProjectSection(SolutionItems) = preProject
 		ExternalFiles\CurrencyCodes-ISO-4217.xlsx = ExternalFiles\CurrencyCodes-ISO-4217.xlsx
 		ExternalFiles\DBSetup.sql = ExternalFiles\DBSetup.sql
+		readme.txt = readme.txt
 	EndProjectSection
 EndProject
 Global

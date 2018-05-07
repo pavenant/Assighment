@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using Pierre.Avenant.Assignment.Core.Entities;
@@ -15,7 +16,6 @@ namespace Pierre.Avenant.Assignment.Core.Services.FileInputService
         private IAccountTransactionRepository _accountTransactionRepository;
         private IFileUploadRepository _fileUploadRepository;
 
-
         public FileUploadService(IExcelFileLoader excelFileLoader,ICurrencyCodeRepository currencyRepository,IFileUploadRepository fileUploadRepository, IAccountTransactionRepository accountTransactionRepository)
         {
             _excelFileLoader = excelFileLoader;
@@ -24,31 +24,35 @@ namespace Pierre.Avenant.Assignment.Core.Services.FileInputService
             _fileUploadValidation = new FileUploadValidation(currencyRepository);
         }
 
-        public AccountTransactionImportResult InportAccountTransactionFile(string filePath)
+        public FileImportResult ImportAccountTransactionFile(string importFilePath,string userFilePath)
         {
-            var accountTransactionImportResult = ProcessTranactionsAccountFile(filePath, out var fileUploadRecords);
-
-            SetFileNameData(filePath, accountTransactionImportResult, fileUploadRecords);
-
-            //persist data.
+            var accountTransactionImportResult = ProcessTranactionsAccountFile(importFilePath, out var fileUploadRecords);
+            SetFileNameData(importFilePath, userFilePath, accountTransactionImportResult, fileUploadRecords);
             PersistTransactionImportResult(accountTransactionImportResult);
-            
             return accountTransactionImportResult;
         }
 
-        private void PersistTransactionImportResult(AccountTransactionImportResult accountTransactionImportResult)
+        private void PersistTransactionImportResult(FileImportResult fileImportResult)
         {
-            _fileUploadRepository.Save(accountTransactionImportResult.FileUpload);
-            foreach (var accountTransaction in accountTransactionImportResult.AccountTransactions)
+            _fileUploadRepository.Save(fileImportResult.FileUpload);
+            foreach (var accountTransaction in fileImportResult.AccountTransactions)
             {
-                accountTransaction.FileUploadId = accountTransactionImportResult.FileUpload.FileUploadId;
-                _accountTransactionRepository.Save(accountTransaction);
+                accountTransaction.FileUploadId = fileImportResult.FileUpload.FileUploadId;
             }
+
+            //to enable large files, use bulk upload --> SQL Bulk Copy is not .net core complient, TODO review compatible solution
+            _accountTransactionRepository.SaveBulk(fileImportResult.AccountTransactions);
+
+            //foreach (var accountTransaction in fileImportResult.AccountTransactions)
+            //{
+            //    accountTransaction.FileUploadId = fileImportResult.FileUpload.FileUploadId;
+            //    _accountTransactionRepository.Save(accountTransaction);
+            //}
         }
 
-        private AccountTransactionImportResult ProcessTranactionsAccountFile(string filePath, out IList<(int RowIndex, string Account, string Description, string CurrencyCode, string Amount)> fileUploadRecords)
+        private FileImportResult ProcessTranactionsAccountFile(string filePath, out IList<(int RowIndex, string Account, string Description, string CurrencyCode, string Amount)> fileUploadRecords)
         {
-            AccountTransactionImportResult accountTransactionImportResult = new AccountTransactionImportResult();
+            FileImportResult fileImportResult = new FileImportResult();
 
             fileUploadRecords = _excelFileLoader.GetTransactionRecords(filePath);
 
@@ -56,46 +60,44 @@ namespace Pierre.Avenant.Assignment.Core.Services.FileInputService
             {
                 if (!IsHeader(uploadRecord))
                 {
-                    if (_fileUploadValidation.ValidateUploadRecord(uploadRecord, accountTransactionImportResult))
+                    if (_fileUploadValidation.ValidateUploadRecord(uploadRecord, fileImportResult))
                     {
-                        AddAccountTransaction(uploadRecord, accountTransactionImportResult);
+                        AddAccountTransaction(uploadRecord, fileImportResult);
                     }
                 }
             }
-
-            return accountTransactionImportResult;
+            return fileImportResult;
         }
 
-        private static void SetFileNameData(string filePath, AccountTransactionImportResult accountTransactionImportResult,
+        private static void SetFileNameData(string filePath,string userFilePath, FileImportResult fileImportResult,
             IList<(int RowIndex, string Account, string Description, string CurrencyCode, string Amount)> fileUploadRecords)
         {
-            accountTransactionImportResult.FileUpload = new FileUpload();
-            accountTransactionImportResult.FileUpload.NumberOfRecords = fileUploadRecords.Count - 1;
-            if (accountTransactionImportResult.AccountTransactions != null)
+            fileImportResult.FileUpload = new FileUpload
             {
-                accountTransactionImportResult.FileUpload.NumberOfSuccessfullRecords =
-                    accountTransactionImportResult.AccountTransactions.Count;
+                NumberOfRecords = fileUploadRecords.Count - 1
+            };
+            if (fileImportResult.AccountTransactions != null)
+            {
+                fileImportResult.FileUpload.NumberOfSuccessfullRecords = fileImportResult.AccountTransactions.Count;
             }
-
-            accountTransactionImportResult.FileUpload.FileName = Path.GetFileName(filePath);
+            fileImportResult.FileUpload.FileName = Path.GetFileName(userFilePath);
         }
 
         private static void AddAccountTransaction(
             (int RowIndex, string Account, string Description, string CurrencyCode, string Amount) uploadRecord,
-            AccountTransactionImportResult result)
+            FileImportResult result)
         {
             AccountTransaction accountTransaction = new AccountTransaction()
             {
                 Account = uploadRecord.Account,
                 Description = uploadRecord.Description,
                 CurrencyCode = uploadRecord.CurrencyCode,
-                Amount = decimal.Parse(uploadRecord.Amount)
+                Amount = decimal.Parse(uploadRecord.Amount),
             };
             if (result.AccountTransactions == null)
             {
                 result.AccountTransactions = new List<AccountTransaction>();
             }
-
             result.AccountTransactions.Add(accountTransaction);
         }
 

@@ -4,6 +4,6 @@ namespace Pierre.Avenant.Assignment.Core.Interfaces.Services
 {
     public interface IFileUploadService
     {
-        AccountTransactionImportResult InportAccountTransactionFile(string filePath);
+        FileImportResult ImportAccountTransactionFile(string importFilePath,string userFileName);
     }
 }

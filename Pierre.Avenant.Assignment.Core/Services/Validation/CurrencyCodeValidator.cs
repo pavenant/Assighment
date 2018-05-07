@@ -9,7 +9,6 @@ namespace Pierre.Avenant.Assignment.Core.Services.Validation
 {
     public class CurrencyCodeValidator : IValidator
     {
-
         public ICurrencyCodeRepository _repo;
 
         public CurrencyCodeValidator(ICurrencyCodeRepository repo)
@@ -19,6 +18,9 @@ namespace Pierre.Avenant.Assignment.Core.Services.Validation
 
         public bool Validate(string input)
         {
+            if (string.IsNullOrEmpty( input ))
+                return false;
+
             if (_repo.GetCachedCurrencyCodes().ContainsKey(input))
             {
                 return true;

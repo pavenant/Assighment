@@ -12,9 +12,15 @@ namespace Pierre.Avenant.Assignment.Infrastructure.Database
 {
     public class FileUploadRepository : IFileUploadRepository
     {
+        private string _connectionString;
+        public FileUploadRepository(string connectionString)
+        {
+            _connectionString = connectionString;
+        }
+
         public void Save(FileUpload fileUpload)
         {
-            using (IDbConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=Assignment;Integrated Security=True"))
+            using (IDbConnection connection = new SqlConnection(_connectionString))
             {
                     var sql = @"
 

@@ -6,10 +6,16 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pierre.Avenant.Assignment.Core\Pierre.Avenant.Assignment.Core.csproj" />
+    <ProjectReference Include="..\Pierre.Avenant.Assignment.Infrastructure\Pierre.Avenant.Assignment.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

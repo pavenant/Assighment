@@ -7,7 +7,9 @@
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="1.50.4" />
+    <PackageReference Include="Dapper.Bulk" Version="1.1.0" />
     <PackageReference Include="ExcelDataReader" Version="3.4.0" />
+    <PackageReference Include="SqlBulkCopy" Version="1.0.0" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="4.4.0" />
   </ItemGroup>
 

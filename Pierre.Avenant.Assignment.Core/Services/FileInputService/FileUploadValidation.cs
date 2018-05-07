@@ -25,52 +25,51 @@ namespace Pierre.Avenant.Assignment.Core.Services.FileInputService
             _requiredValidator = new RequiredFieldValidator();
         }
 
-        public bool ValidateUploadRecord((int RowIndex, string Account, string Description, string CurrencyCode, string Amount) uploadRecord, AccountTransactionImportResult result)
+        public bool ValidateUploadRecord((int RowIndex, string Account, string Description, string CurrencyCode, string Amount) uploadRecord, FileImportResult result)
         {
-            AccountTransactionUploadFailure failure =
-                new AccountTransactionUploadFailure
+            RowValidationFailure validationFailure = new RowValidationFailure
                 {
-                    FieldFailures = new List<TransactionAccountFieldFailure>(),
+                    CellValidationFailures = new List<CellValidationFailure>(),
                     RowNumber = uploadRecord.RowIndex + 1
                 };
 
             if (!_requiredValidator.Validate(uploadRecord.Account))
             {
-                failure.FieldFailures.Add(new TransactionAccountFieldFailure() { FieldName = "Account", FailureDescription = "Required Field" });
+                validationFailure.CellValidationFailures.Add(new CellValidationFailure() { ColumnName = "Account", ValidationFailureDescription = "Required Field" });
             }
 
             if (!_requiredValidator.Validate(uploadRecord.Description))
             {
-                failure.FieldFailures.Add(new TransactionAccountFieldFailure() { FieldName = "Description", FailureDescription = "Required Field" });
+                validationFailure.CellValidationFailures.Add(new CellValidationFailure() { ColumnName = "Description", ValidationFailureDescription = "Required Field" });
             }
 
             if (!_requiredValidator.Validate(uploadRecord.CurrencyCode))
             {
-                failure.FieldFailures.Add(new TransactionAccountFieldFailure() { FieldName = "CurrencyCode", FailureDescription = "Required Field" });
+                validationFailure.CellValidationFailures.Add(new CellValidationFailure() { ColumnName = "CurrencyCode", ValidationFailureDescription = "Required Field" });
             }
 
             if (!_requiredValidator.Validate(uploadRecord.Amount))
             {
-                failure.FieldFailures.Add(new TransactionAccountFieldFailure() { FieldName = "Amount", FailureDescription = "Required Field" });
+                validationFailure.CellValidationFailures.Add(new CellValidationFailure() { ColumnName = "Amount", ValidationFailureDescription = "Required Field" });
             }
 
             if (!_currencyCodeValidator.Validate(uploadRecord.CurrencyCode))
             {
-                failure.FieldFailures.Add(new TransactionAccountFieldFailure() { FieldName = "CurrencyCode", FailureDescription = "Currency Code not Valid" });
+                validationFailure.CellValidationFailures.Add(new CellValidationFailure() { ColumnName = "CurrencyCode", ValidationFailureDescription = "Currency Code not Valid" });
             }
 
             if (!_amountValidator.Validate(uploadRecord.Amount))
             {
-                failure.FieldFailures.Add(new TransactionAccountFieldFailure() { FieldName = "Amount", FailureDescription = "Amount is not a valid amount" });
+                validationFailure.CellValidationFailures.Add(new CellValidationFailure() { ColumnName = "Amount", ValidationFailureDescription = "Amount is not a valid amount" });
             }
 
-            if (failure.FieldFailures.Count > 0)
+            if (validationFailure.CellValidationFailures.Count > 0)
             {
                 if (result.AccountTransactionUploadFailures == null)
                 {
-                    result.AccountTransactionUploadFailures = new List<AccountTransactionUploadFailure>();
+                    result.AccountTransactionUploadFailures = new List<RowValidationFailure>();
                 }
-                result.AccountTransactionUploadFailures.Add(failure);
+                result.AccountTransactionUploadFailures.Add(validationFailure);
                 return false;
             }
 
