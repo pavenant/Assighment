@@ -13,8 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pierre.Avenant.Assignment.T
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SetupFiles", "SetupFiles", "{44F9402C-6A43-41F6-BC16-BA78AD5E6765}"
 	ProjectSection(SolutionItems) = preProject
-		ExternalFiles\CurrencyCodes-ISO-4217.xlsx = ExternalFiles\CurrencyCodes-ISO-4217.xlsx
-		ExternalFiles\DBSetup.sql = ExternalFiles\DBSetup.sql
+		SetupFiles\DBSetup.sql = SetupFiles\DBSetup.sql
 		readme.txt = readme.txt
 	EndProjectSection
 EndProject
