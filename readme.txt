@@ -6,7 +6,7 @@ Setup Instructions
 4.	To run Integration Tests, change connection string in: Pierre.Avenant.Test\IntegrationTests\Infrastructure\Database\Configuration.cs (ran out of time to figure out how .net core works with connection strings in test projects.)
 
 General Notes and things still todo:
-1.	Used .net core with visual studio. 
+1.	Used .net core with Visual Studio. 
 2.	The SQL Bulk copy is not .net core compliant, not found time to investigate a compliant alternative.
 2.	Still have to implement paging for big files.
 3.	Still have to implement filter /edit/add/update for Account Transactions

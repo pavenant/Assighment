@@ -8,7 +8,7 @@ using Pierre.Avenant.Assignment.Infrastructure.Excel;
 namespace Pierre.Avenant.Assignment.Test.IntegrationTests.Infrastructure.Excel
 {
     [TestClass]
-    public class ExcelFacadeTest
+    public class ExcelProcessorTest
     {
         [TestMethod]
         public void Import_ValidFileSuccess()
